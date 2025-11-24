@@ -1,0 +1,55 @@
+# Tangents Repository Workspace (Codex Max)
+
+This document serves as the top-level scaffold for the Tangents project. Codex Max will treat this as the canonical source of truth for architecture, modules, and file structure.
+
+## Repository Structure
+
+```
+tangents/
+├── README.md
+├── docs/
+│   └── architecture/
+│       └── overview.md
+├── core/
+│   ├── types/
+│   │   ├── VMConfig.swift
+│   │   ├── VMState.swift
+│   │   └── VirtualizationBackend.swift
+│   ├── runtime/
+│   │   ├── VMRuntime.swift
+│   │   ├── VMEventBus.swift
+│   │   └── SnapshotManager.swift
+│   └── backends/
+│       ├── HypervisorBackend.swift
+│       └── QEMUBackend.swift
+├── app/
+│   ├── TangentsApp.swift
+│   ├── views/
+│   │   ├── MainWindow.swift
+│   │   ├── VMListView.swift
+│   │   └── VMDetailView.swift
+│   └── viewmodels/
+│       ├── VMListViewModel.swift
+│       └── VMDetailViewModel.swift
+├── cli/
+│   └── tangents.swift
+├── api/
+│   ├── rpc/
+│   │   └── TangentsRPC.swift
+│   └── grpc/
+│       └── TangentsService.proto
+└── guest-tools/
+    ├── agent/
+    │   └── tg-agent.c
+    └── protocols/
+        └── guest_host_channel.md
+```
+
+## Next Steps for Codex Max
+
+1. Populate the initial core types.
+2. Fill `README.md` with project identity and build instructions.
+3. Generate `docs/architecture/overview.md`.
+4. Begin implementing `/core/types/VMConfig.swift` and related files.
+
+This workspace can be expanded with code blocks and file contents upon user request.
